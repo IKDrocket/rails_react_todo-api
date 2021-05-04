@@ -1,6 +1,6 @@
 class Api::V1::TodosController < ApplicationController
     def index
-        todos = Todo.order(updated_at: :desc)
+        todos = Todo.where(deleted_at: 0).order(updated_at: :desc)
         render json: todos
     end
 
@@ -26,15 +26,15 @@ class Api::V1::TodosController < ApplicationController
         end
     end
     def destroy
-        if Todo.destroy(params[:id])
-            head :no_content
+        if todo.update(todo_params)
+            render json: todo
         else
             render json: { error: "Failed to destroy" } , status: 422
         end
     end
 
     def destroy_all
-        if Todo.destroy_all
+        if Todo.update_all(deleted_at: 1)
             head :no_content
         else
             render json: { error: "Failed to destroy" } , status: 422
@@ -43,6 +43,6 @@ class Api::V1::TodosController < ApplicationController
 
     private
     def todo_params
-        params.require(:todo).permit(:name, :is_completed)
+        params.require(:todo).permit(:name, :is_completed, :deleted_at)
     end
 end

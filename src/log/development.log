@@ -5424,3 +5424,1161 @@ Processing by Api::V1::TodosController#index as HTML
 Completed 200 OK in 75ms (Views: 3.0ms | ActiveRecord: 28.7ms | Allocations: 992)
 
 
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 08:10:50 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (28.8ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 206ms (Views: 5.7ms | ActiveRecord: 49.4ms | Allocations: 1117)
+
+
+Started POST "/api/v1/todos/" for 172.19.0.1 at 2021-05-02 12:49:56 +0000
+Processing by Api::V1::TodosController#create as HTML
+  Parameters: {"name"=>"寝る", "todo"=>{"name"=>"寝る"}}
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (22.0ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('寝る', '2021-05-02 12:49:56.788974', '2021-05-02 12:49:56.788974')[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (18.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+Completed 200 OK in 202ms (Views: 0.5ms | ActiveRecord: 70.5ms | Allocations: 1892)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 12:49:56 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (16.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 2.8ms | ActiveRecord: 16.2ms | Allocations: 1065)
+
+
+Started POST "/api/v1/todos/" for 172.19.0.1 at 2021-05-02 12:50:12 +0000
+Processing by Api::V1::TodosController#create as HTML
+  Parameters: {"name"=>"食う", "todo"=>{"name"=>"食う"}}
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (24.9ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('食う', '2021-05-02 12:50:12.503309', '2021-05-02 12:50:12.503309')[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+Completed 200 OK in 93ms (Views: 0.5ms | ActiveRecord: 66.6ms | Allocations: 1761)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 12:50:12 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (10.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 2.5ms | ActiveRecord: 10.6ms | Allocations: 1146)
+
+
+Started POST "/api/v1/todos/" for 172.19.0.1 at 2021-05-02 12:50:21 +0000
+Processing by Api::V1::TodosController#create as HTML
+  Parameters: {"name"=>"遊ぶ", "todo"=>{"name"=>"遊ぶ"}}
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (13.0ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('遊ぶ', '2021-05-02 12:50:21.178727', '2021-05-02 12:50:21.178727')[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+Completed 200 OK in 60ms (Views: 0.4ms | ActiveRecord: 42.7ms | Allocations: 1772)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 12:50:21 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 3.1ms | ActiveRecord: 12.5ms | Allocations: 1230)
+
+
+Started PATCH "/api/v1/todos/29" for 172.19.0.1 at 2021-05-02 12:50:34 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"29", "name"=>"食う", "is_completed"=>true, "todo"=>{"id"=>"29", "name"=>"食う", "is_completed"=>true}}
+  [1m[36mTodo Load (19.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 29 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (24.9ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-05-02 12:50:34.196203' WHERE `todos`.`id` = 29[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (21.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 132ms (Views: 0.4ms | ActiveRecord: 85.6ms | Allocations: 4683)
+
+
+Started PATCH "/api/v1/todos/30" for 172.19.0.1 at 2021-05-02 16:07:24 +0000
+Started PATCH "/api/v1/todos/30" for 172.19.0.1 at 2021-05-02 16:07:24 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"30", "name"=>"遊ぶ", "is_completed"=>true, "todo"=>{"id"=>"30", "name"=>"遊ぶ", "is_completed"=>true}}
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"30", "name"=>"遊ぶ", "is_completed"=>true, "todo"=>{"id"=>"30", "name"=>"遊ぶ", "is_completed"=>true}}
+  [1m[36mTodo Load (13.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 30 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTodo Load (18.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 30 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (15.7ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-05-02 16:07:24.281412' WHERE `todos`.`id` = 30[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (22.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTodo Update (27.5ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-05-02 16:07:24.295365' WHERE `todos`.`id` = 30[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 185ms (Views: 0.6ms | ActiveRecord: 81.1ms | Allocations: 4701)
+
+
+  [1m[36mTRANSACTION (22.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 207ms (Views: 0.5ms | ActiveRecord: 94.4ms | Allocations: 5019)
+
+
+Started PATCH "/api/v1/todos/28" for 172.19.0.1 at 2021-05-02 16:07:26 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"28", "name"=>"寝る", "is_completed"=>true, "todo"=>{"id"=>"28", "name"=>"寝る", "is_completed"=>true}}
+  [1m[36mTodo Load (11.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 28 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (10.8ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-05-02 16:07:26.255840' WHERE `todos`.`id` = 28[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 76ms (Views: 0.4ms | ActiveRecord: 53.7ms | Allocations: 2283)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:08:39 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (15.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 3.3ms | ActiveRecord: 15.4ms | Allocations: 1246)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:34:03 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (10.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 123ms (Views: 2.6ms | ActiveRecord: 20.3ms | Allocations: 1340)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:34:25 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (13.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 2.5ms | ActiveRecord: 13.9ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:48:05 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 120ms (Views: 2.6ms | ActiveRecord: 28.5ms | Allocations: 1341)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:48:10 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 2.8ms | ActiveRecord: 11.6ms | Allocations: 1232)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:57:10 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 110ms (Views: 3.6ms | ActiveRecord: 23.4ms | Allocations: 1342)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:57:13 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (16.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 49ms (Views: 3.0ms | ActiveRecord: 16.6ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:57:23 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 2.4ms | ActiveRecord: 11.7ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:57:23 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 2.5ms | ActiveRecord: 11.1ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:58:11 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 2.8ms | ActiveRecord: 11.5ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 16:58:12 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 3.0ms | ActiveRecord: 11.4ms | Allocations: 1229)
+
+
+Started PATCH "/api/v1/todos/29" for 172.19.0.1 at 2021-05-02 16:58:47 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"29", "name"=>"食う", "is_completed"=>false, "todo"=>{"id"=>"29", "name"=>"食う", "is_completed"=>false}}
+  [1m[36mTodo Load (34.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 29 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (17.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (14.3ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = FALSE, `todos`.`updated_at` = '2021-05-02 16:58:47.866090' WHERE `todos`.`id` = 29[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (21.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 115ms (Views: 0.4ms | ActiveRecord: 88.6ms | Allocations: 2289)
+
+
+Started PATCH "/api/v1/todos/29" for 172.19.0.1 at 2021-05-02 16:58:48 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"29", "name"=>"食う", "is_completed"=>true, "todo"=>{"id"=>"29", "name"=>"食う", "is_completed"=>true}}
+  [1m[36mTodo Load (24.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 29 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (20.5ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-05-02 16:58:48.517175' WHERE `todos`.`id` = 29[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 114ms (Views: 0.4ms | ActiveRecord: 86.7ms | Allocations: 2287)
+
+
+Started PATCH "/api/v1/todos/29" for 172.19.0.1 at 2021-05-02 16:58:50 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"29", "name"=>"食う", "is_completed"=>false, "todo"=>{"id"=>"29", "name"=>"食う", "is_completed"=>false}}
+  [1m[36mTodo Load (14.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 29 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (17.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (14.3ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = FALSE, `todos`.`updated_at` = '2021-05-02 16:58:50.246438' WHERE `todos`.`id` = 29[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 92ms (Views: 0.5ms | ActiveRecord: 61.0ms | Allocations: 2284)
+
+
+Started PATCH "/api/v1/todos/29" for 172.19.0.1 at 2021-05-02 16:58:50 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"29", "name"=>"食う", "is_completed"=>true, "todo"=>{"id"=>"29", "name"=>"食う", "is_completed"=>true}}
+  [1m[36mTodo Load (15.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 29 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (25.2ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-05-02 16:58:50.748985' WHERE `todos`.`id` = 29[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 98ms (Views: 0.5ms | ActiveRecord: 73.1ms | Allocations: 2284)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:00:27 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (13.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 2.8ms | ActiveRecord: 13.0ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:00:27 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 2.4ms | ActiveRecord: 11.6ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:00:33 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 2.5ms | ActiveRecord: 12.4ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:00:33 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (10.8ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 3.1ms | ActiveRecord: 10.8ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:00:44 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 3.5ms | ActiveRecord: 12.9ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:00:44 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (18.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 2.5ms | ActiveRecord: 18.7ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:00:50 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 3.3ms | ActiveRecord: 11.3ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:00:50 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 2.7ms | ActiveRecord: 12.6ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:01:25 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 3.5ms | ActiveRecord: 11.9ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:01:29 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (16.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 2.9ms | ActiveRecord: 16.1ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:03:14 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 2.6ms | ActiveRecord: 11.7ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:03:17 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (17.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 2.7ms | ActiveRecord: 17.9ms | Allocations: 1229)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:03:23 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 2.7ms | ActiveRecord: 12.2ms | Allocations: 1229)
+
+
+Started DELETE "/api/v1/todos/27" for 172.19.0.1 at 2021-05-02 17:05:50 +0000
+Processing by Api::V1::TodosController#destroy as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mTodo Load (12.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 27 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+  [1m[36mTodo Destroy (11.0ms)[0m  [1m[31mDELETE FROM `todos` WHERE `todos`.`id` = 27[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+Completed 204 No Content in 64ms (ActiveRecord: 47.9ms | Allocations: 1907)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:07:11 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (28.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 143ms (Views: 2.8ms | ActiveRecord: 28.0ms | Allocations: 1146)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:08:14 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (35.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 65ms (Views: 3.1ms | ActiveRecord: 35.5ms | Allocations: 1146)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:08:26 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (25.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 73ms (Views: 2.3ms | ActiveRecord: 25.0ms | Allocations: 1146)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-02 17:11:37 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (18.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 42ms (Views: 2.6ms | ActiveRecord: 18.5ms | Allocations: 1146)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 04:23:55 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (18.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 135ms (Views: 3.0ms | ActiveRecord: 39.4ms | Allocations: 1259)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:20:15 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (20.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 136ms (Views: 3.0ms | ActiveRecord: 35.2ms | Allocations: 1257)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:20:18 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (13.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 2.7ms | ActiveRecord: 13.4ms | Allocations: 1146)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:20:26 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (30.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 54ms (Views: 3.5ms | ActiveRecord: 30.7ms | Allocations: 1146)
+
+
+Started PATCH "/api/v1/todos/15" for 172.19.0.1 at 2021-05-04 06:20:29 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"15", "name"=>"Going around the world", "is_completed"=>true, "todo"=>{"id"=>"15", "name"=>"Going around the world", "is_completed"=>true}}
+  [1m[36mTodo Load (18.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (19.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (18.9ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-05-04 06:20:29.908510' WHERE `todos`.`id` = 15[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (18.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 99ms (Views: 0.4ms | ActiveRecord: 75.0ms | Allocations: 2283)
+
+
+Started PATCH "/api/v1/todos/15" for 172.19.0.1 at 2021-05-04 06:20:30 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"15", "name"=>"Going around the world", "is_completed"=>false, "todo"=>{"id"=>"15", "name"=>"Going around the world", "is_completed"=>false}}
+  [1m[36mTodo Load (20.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (14.2ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = FALSE, `todos`.`updated_at` = '2021-05-04 06:20:30.725165' WHERE `todos`.`id` = 15[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (25.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 103ms (Views: 0.5ms | ActiveRecord: 73.9ms | Allocations: 2283)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:21:20 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (18.8ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 40ms (Views: 2.6ms | ActiveRecord: 18.8ms | Allocations: 1146)
+
+
+Started PATCH "/api/v1/todos/15" for 172.19.0.1 at 2021-05-04 06:21:34 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"15", "name"=>"Going around the world", "is_completed"=>true, "todo"=>{"id"=>"15", "name"=>"Going around the world", "is_completed"=>true}}
+  [1m[36mTodo Load (24.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (21.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (19.9ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = TRUE, `todos`.`updated_at` = '2021-05-04 06:21:34.673560' WHERE `todos`.`id` = 15[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (21.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 111ms (Views: 0.4ms | ActiveRecord: 87.5ms | Allocations: 2283)
+
+
+Started PATCH "/api/v1/todos/15" for 172.19.0.1 at 2021-05-04 06:21:35 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"15", "name"=>"Going around the world", "is_completed"=>false, "todo"=>{"id"=>"15", "name"=>"Going around the world", "is_completed"=>false}}
+  [1m[36mTodo Load (24.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 15 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (12.7ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`is_completed` = FALSE, `todos`.`updated_at` = '2021-05-04 06:21:35.174339' WHERE `todos`.`id` = 15[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 84ms (Views: 0.4ms | ActiveRecord: 64.7ms | Allocations: 2283)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:21:42 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (14.8ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 34ms (Views: 2.4ms | ActiveRecord: 14.8ms | Allocations: 1146)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:21:46 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (18.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 2.8ms | ActiveRecord: 18.7ms | Allocations: 1146)
+
+
+  [1m[35m (23.2ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[35m (22.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddDeletedAtTodos (20210504062812)
+  [1m[35m (73.8ms)[0m  [1m[35mALTER TABLE `todos` ADD `deleted_at` tinyint(1)[0m
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (11.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210504062812')[0m
+  [1m[36mTRANSACTION (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (20.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (13.9ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (14.1ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[35m (17.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (12.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[35m (11.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (18.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (9.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (11.5ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (12.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (11.0ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (49.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `app_development`[0m
+  [1m[35m (22.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS `app_test`[0m
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (27.3ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (37.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (35.8ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (19.7ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTodps (20210430155254)
+  [1m[35m (45.8ms)[0m  [1m[35mCREATE TABLE `todps` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `is_completed` tinyint(1) DEFAULT FALSE NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (15.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210430155254')[0m
+  [1m[36mTRANSACTION (18.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeTodpsToTodo (20210430155854)
+  [1m[35m (25.1ms)[0m  [1m[35mRENAME TABLE `todps` TO `todo`[0m
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (11.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210430155854')[0m
+  [1m[36mTRANSACTION (20.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeTodoToTodos (20210430161629)
+  [1m[35m (31.5ms)[0m  [1m[35mRENAME TABLE `todo` TO `todos`[0m
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (15.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210430161629')[0m
+  [1m[36mTRANSACTION (17.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeletedAtTodos (20210504062812)
+  [1m[35m (29.5ms)[0m  [1m[35mALTER TABLE `todos` ADD `deleted_at` tinyint(1)[0m
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (10.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210504062812')[0m
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (10.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (11.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-05-04 06:34:49.188967', '2021-05-04 06:34:49.188967')[0m
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (19.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[35m (12.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (13.7ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (14.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (23.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (12.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (13.0ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('Going around the world', '2021-05-04 06:37:35.380144', '2021-05-04 06:37:35.380144')[0m
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (20.7ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('graduating from college', '2021-05-04 06:37:35.429998', '2021-05-04 06:37:35.429998')[0m
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (19.8ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('publishing a book', '2021-05-04 06:37:35.485515', '2021-05-04 06:37:35.485515')[0m
+  [1m[36mTRANSACTION (23.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (11.9ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (18.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  [1m[35m (41.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `app_development`[0m
+  [1m[35m (27.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `app_test`[0m
+  [1m[35m (55.0ms)[0m  [1m[35mCREATE DATABASE `app_development` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE DATABASE `app_test` DEFAULT CHARACTER SET `utf8mb4`[0m
+  [1m[35m (33.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (47.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (11.6ms)[0m  [1m[34mSELECT GET_LOCK('5277929974492897470', 0)[0m
+  [1m[35m (12.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTodps (20210430155254)
+  [1m[35m (38.2ms)[0m  [1m[35mCREATE TABLE `todps` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `is_completed` tinyint(1) DEFAULT FALSE NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (10.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210430155254')[0m
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeTodpsToTodo (20210430155854)
+  [1m[35m (26.6ms)[0m  [1m[35mRENAME TABLE `todps` TO `todo`[0m
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (13.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210430155854')[0m
+  [1m[36mTRANSACTION (19.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeTodoToTodos (20210430161629)
+  [1m[35m (39.8ms)[0m  [1m[35mRENAME TABLE `todo` TO `todos`[0m
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (12.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210430161629')[0m
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeletedAtTodos (20210504062812)
+  [1m[35m (29.1ms)[0m  [1m[35mALTER TABLE `todos` ADD `deleted_at` tinyint(1) DEFAULT FALSE NOT NULL[0m
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (11.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20210504062812')[0m
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (12.7ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (20.5ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-05-04 06:38:35.897270', '2021-05-04 06:38:35.897270')[0m
+  [1m[36mTRANSACTION (17.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (12.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5277929974492897470')[0m
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (16.0ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('Going around the world', '2021-05-04 06:38:45.142449', '2021-05-04 06:38:45.142449')[0m
+  [1m[36mTRANSACTION (21.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (16.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (15.4ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('graduating from college', '2021-05-04 06:38:45.198758', '2021-05-04 06:38:45.198758')[0m
+  [1m[36mTRANSACTION (21.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodo Create (10.8ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('publishing a book', '2021-05-04 06:38:45.255097', '2021-05-04 06:38:45.255097')[0m
+  [1m[36mTRANSACTION (17.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:49:35 +0000
+  [1m[35m (12.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 5.5ms | ActiveRecord: 11.3ms | Allocations: 4673)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:49:35 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 2.4ms | ActiveRecord: 11.5ms | Allocations: 950)
+
+
+Started POST "/api/v1/todos/" for 172.19.0.1 at 2021-05-04 06:49:41 +0000
+Processing by Api::V1::TodosController#create as HTML
+  Parameters: {"name"=>"test", "todo"=>{"name"=>"test"}}
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (26.0ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('test', '2021-05-04 06:49:41.600821', '2021-05-04 06:49:41.600821')[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (16.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+Completed 200 OK in 73ms (Views: 0.4ms | ActiveRecord: 51.6ms | Allocations: 1935)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:49:41 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 2.5ms | ActiveRecord: 12.2ms | Allocations: 1033)
+
+
+Started DELETE "/api/v1/todos/4" for 172.19.0.1 at 2021-05-04 06:49:44 +0000
+Processing by Api::V1::TodosController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTodo Load (16.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+  [1m[36mTodo Destroy (14.5ms)[0m  [1m[31mDELETE FROM `todos` WHERE `todos`.`id` = 4[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+Completed 204 No Content in 80ms (ActiveRecord: 59.2ms | Allocations: 2036)
+
+
+Started DELETE "/api/v1/todos/4" for 172.19.0.1 at 2021-05-04 06:50:04 +0000
+Processing by Api::V1::TodosController#destroy as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTodo Load (12.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+Completed 404 Not Found in 27ms (ActiveRecord: 12.2ms | Allocations: 537)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=4):
+  
+app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:50:08 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (16.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 4.2ms | ActiveRecord: 16.0ms | Allocations: 1099)
+
+
+Started POST "/api/v1/todos/" for 172.19.0.1 at 2021-05-04 06:50:21 +0000
+Processing by Api::V1::TodosController#create as HTML
+  Parameters: {"name"=>"test2", "todo"=>{"name"=>"test2"}}
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (12.3ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('test2', '2021-05-04 06:50:21.185110', '2021-05-04 06:50:21.185110')[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+Completed 200 OK in 99ms (Views: 0.4ms | ActiveRecord: 48.1ms | Allocations: 1833)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:50:21 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (16.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 2.5ms | ActiveRecord: 16.7ms | Allocations: 1033)
+
+
+Started DELETE "/api/v1/todos/5" for 172.19.0.1 at 2021-05-04 06:50:42 +0000
+Processing by Api::V1::TodosController#destroy as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mTodo Load (12.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+  [1m[36mTodo Destroy (12.4ms)[0m  [1m[31mDELETE FROM `todos` WHERE `todos`.`id` = 5[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+Completed 204 No Content in 70ms (ActiveRecord: 51.1ms | Allocations: 1853)
+
+
+Started POST "/api/v1/todos/" for 172.19.0.1 at 2021-05-04 06:51:57 +0000
+Processing by Api::V1::TodosController#create as HTML
+  Parameters: {"name"=>"test3", "todo"=>{"name"=>"test3"}}
+  [1m[36mTRANSACTION (20.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (20.6ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('test3', '2021-05-04 06:51:57.299987', '2021-05-04 06:51:57.299987')[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (45.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+Completed 200 OK in 114ms (Views: 0.5ms | ActiveRecord: 136.7ms | Allocations: 4550)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:51:57 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (16.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 51ms (Views: 2.4ms | ActiveRecord: 16.7ms | Allocations: 1145)
+
+
+Started DELETE "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 06:52:04 +0000
+Processing by Api::V1::TodosController#destroy as HTML
+  Parameters: {"id"=>"6"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2033)
+
+
+  
+NameError (undefined local variable or method `todo' for #<Api::V1::TodosController:0x000000000092b8>):
+  
+app/controllers/api/v1/todos_controller.rb:29:in `destroy'
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:53:26 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (20.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 97ms (Views: 3.0ms | ActiveRecord: 20.4ms | Allocations: 1003)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:53:26 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (22.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 2.8ms | ActiveRecord: 22.4ms | Allocations: 1001)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:53:29 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (30.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 53ms (Views: 3.3ms | ActiveRecord: 30.5ms | Allocations: 1001)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 06:53:32 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTodo Load (36.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+Completed 400 Bad Request in 63ms (ActiveRecord: 36.7ms | Allocations: 746)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: todo
+Did you mean?  action
+               id
+               controller):
+  
+app/controllers/api/v1/todos_controller.rb:46:in `todo_params'
+app/controllers/api/v1/todos_controller.rb:22:in `update'
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:59:48 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 111ms (Views: 3.0ms | ActiveRecord: 26.0ms | Allocations: 1139)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:59:48 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 3.1ms | ActiveRecord: 12.1ms | Allocations: 1001)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 06:59:51 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true}}
+  [1m[36mTodo Load (10.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (18.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (25.1ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 06:59:51.781585', `todos`.`deleted_at` = TRUE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (20.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 106ms (Views: 0.6ms | ActiveRecord: 74.5ms | Allocations: 2355)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 06:59:55 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (18.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 5.7ms | ActiveRecord: 18.7ms | Allocations: 1002)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:01:30 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false}}
+  [1m[36mTodo Load (23.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (24.6ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:01:30.207731', `todos`.`deleted_at` = FALSE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 108ms (Views: 0.5ms | ActiveRecord: 84.3ms | Allocations: 2300)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:02:36 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (16.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 69ms (Views: 3.3ms | ActiveRecord: 16.3ms | Allocations: 1001)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:02:36 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (17.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 3.2ms | ActiveRecord: 17.7ms | Allocations: 1002)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:02:39 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true}}
+  [1m[36mTodo Load (13.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (29.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (21.3ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:02:39.286864', `todos`.`deleted_at` = TRUE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (33.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 123ms (Views: 0.6ms | ActiveRecord: 97.5ms | Allocations: 2299)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:03:54 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (18.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 2.9ms | ActiveRecord: 18.7ms | Allocations: 1001)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:03:54 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (15.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 38ms (Views: 3.3ms | ActiveRecord: 15.5ms | Allocations: 1001)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:06:11 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (19.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 2.9ms | ActiveRecord: 19.6ms | Allocations: 1001)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:06:11 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (25.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 3.3ms | ActiveRecord: 25.2ms | Allocations: 1001)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:06:22 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false}}
+  [1m[36mTodo Load (41.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (22.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (14.1ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:06:22.139550', `todos`.`deleted_at` = FALSE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 127ms (Views: 0.4ms | ActiveRecord: 100.2ms | Allocations: 2299)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:06:23 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true}}
+  [1m[36mTodo Load (9.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (11.1ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:06:24.011473', `todos`.`deleted_at` = TRUE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 66ms (Views: 0.5ms | ActiveRecord: 46.5ms | Allocations: 2299)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:07:04 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 2.4ms | ActiveRecord: 11.6ms | Allocations: 1001)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:07:06 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 2.9ms | ActiveRecord: 11.1ms | Allocations: 1001)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:07:08 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false}}
+  [1m[36mTodo Load (18.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (22.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (19.0ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:07:08.535927', `todos`.`deleted_at` = FALSE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 108ms (Views: 0.4ms | ActiveRecord: 81.5ms | Allocations: 2299)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:07:09 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true}}
+  [1m[36mTodo Load (18.1ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (19.4ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:07:09.628593', `todos`.`deleted_at` = TRUE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 102ms (Views: 0.4ms | ActiveRecord: 76.7ms | Allocations: 2279)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:07:11 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 2.5ms | ActiveRecord: 11.3ms | Allocations: 1001)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:07:19 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false}}
+  [1m[36mTodo Load (12.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (11.9ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:07:19.043769', `todos`.`deleted_at` = FALSE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 89ms (Views: 0.5ms | ActiveRecord: 61.1ms | Allocations: 2300)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:09:48 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (19.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 40ms (Views: 3.7ms | ActiveRecord: 19.0ms | Allocations: 1001)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:09:48 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (16.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 3.6ms | ActiveRecord: 16.2ms | Allocations: 1001)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:09:50 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true}}
+  [1m[36mTodo Load (14.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (20.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (10.5ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:09:50.382918', `todos`.`deleted_at` = TRUE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (34.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 99ms (Views: 0.4ms | ActiveRecord: 79.1ms | Allocations: 2299)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:12:09 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (13.0ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 3.6ms | ActiveRecord: 13.0ms | Allocations: 1001)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:12:09 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (13.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 2.3ms | ActiveRecord: 13.7ms | Allocations: 1001)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:12:14 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>false}}
+  [1m[36mTodo Load (11.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (16.9ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:12:14.386330', `todos`.`deleted_at` = FALSE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 78ms (Views: 0.4ms | ActiveRecord: 56.0ms | Allocations: 2279)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:12:18 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.7ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 3.3ms | ActiveRecord: 11.7ms | Allocations: 1001)
+
+
+Started PATCH "/api/v1/todos/6" for 172.19.0.1 at 2021-05-04 07:12:31 +0000
+Processing by Api::V1::TodosController#update as HTML
+  Parameters: {"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true, "todo"=>{"id"=>"6", "name"=>"test3", "is_completed"=>false, "deleted_at"=>true}}
+  [1m[36mTodo Load (40.2ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:21:in `update'
+[31mUnpermitted parameter: :id[0m
+  [1m[36mTRANSACTION (21.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTodo Update (16.6ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`updated_at` = '2021-05-04 07:12:31.090867', `todos`.`deleted_at` = TRUE WHERE `todos`.`id` = 6[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (19.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:22:in `update'
+Completed 200 OK in 119ms (Views: 0.4ms | ActiveRecord: 97.5ms | Allocations: 2300)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:19:36 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (11.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 136ms (Views: 11.0ms | ActiveRecord: 28.7ms | Allocations: 5218)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:20:28 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.3ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:3:in `index'
+Completed 404 Not Found in 68ms (ActiveRecord: 50.9ms | Allocations: 1965)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'={:deleted_at=>0}):
+  
+app/controllers/api/v1/todos_controller.rb:3:in `index'
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:20:29 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.6ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:3:in `index'
+Completed 404 Not Found in 29ms (ActiveRecord: 12.6ms | Allocations: 644)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'={:deleted_at=>0}):
+  
+app/controllers/api/v1/todos_controller.rb:3:in `index'
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:21:35 +0000
+Processing by Api::V1::TodosController#index as HTML
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 14.5ms | Allocations: 1413)
+
+
+  
+Arel::Visitors::UnsupportedVisitError (Unsupported argument type: Hash. Construct an Arel node instead.):
+  
+app/controllers/api/v1/todos_controller.rb:4:in `index'
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:26:15 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (12.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`deleted_at` = FALSE ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 81ms (Views: 5.9ms | ActiveRecord: 56.1ms | Allocations: 4650)
+
+
+Started DELETE "/api/v1/todos/destroy_all" for 172.19.0.1 at 2021-05-04 07:26:38 +0000
+Processing by Api::V1::TodosController#destroy_all as HTML
+  [1m[36mTodo Update All (23.6ms)[0m  [1m[33mUPDATE `todos` SET `todos`.`deleted_at` = TRUE[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:37:in `destroy_all'
+Completed 204 No Content in 38ms (ActiveRecord: 23.6ms | Allocations: 487)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:27:20 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (34.9ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`deleted_at` = FALSE ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 78ms (Views: 1.5ms | ActiveRecord: 34.9ms | Allocations: 679)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:29:09 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (13.5ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`deleted_at` = FALSE ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 2.1ms | ActiveRecord: 34.4ms | Allocations: 1928)
+
+
+Started POST "/api/v1/todos/" for 172.19.0.1 at 2021-05-04 07:29:16 +0000
+Processing by Api::V1::TodosController#create as HTML
+  Parameters: {"name"=>"test", "todo"=>{"name"=>"test"}}
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (31.3ms)[0m  [1m[32mINSERT INTO `todos` (`name`, `created_at`, `updated_at`) VALUES ('test', '2021-05-04 07:29:16.836683', '2021-05-04 07:29:16.836683')[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (38.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:14:in `create'
+Completed 200 OK in 126ms (Views: 0.4ms | ActiveRecord: 151.7ms | Allocations: 4287)
+
+
+Started GET "/api/v1/todos" for 172.19.0.1 at 2021-05-04 07:29:16 +0000
+Processing by Api::V1::TodosController#index as HTML
+  [1m[36mTodo Load (33.4ms)[0m  [1m[34mSELECT `todos`.* FROM `todos` WHERE `todos`.`deleted_at` = FALSE ORDER BY `todos`.`updated_at` DESC[0m
+  ↳ app/controllers/api/v1/todos_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 2.4ms | ActiveRecord: 33.4ms | Allocations: 780)
+
+
