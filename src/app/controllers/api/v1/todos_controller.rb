@@ -1,6 +1,8 @@
 class Api::V1::TodosController < ApplicationController
+    require "date"
+
     def index
-        todos = Todo.where(deleted_at: 0).order(updated_at: :desc)
+        todos = Todo.where(deleted_at: nil).order(updated_at: :desc)
         render json: todos
     end
 
@@ -25,7 +27,9 @@ class Api::V1::TodosController < ApplicationController
             render json: todo.errors, status: 422
         end
     end
+    
     def destroy
+        todo = Todo.find(params[:id])
         if todo.update(todo_params)
             render json: todo
         else
@@ -34,7 +38,8 @@ class Api::V1::TodosController < ApplicationController
     end
 
     def destroy_all
-        if Todo.update_all(deleted_at: 1)
+        todos = Todo.where(deleted_at: nil)
+        if todos.update_all(deleted_at: DateTime.now)
             head :no_content
         else
             render json: { error: "Failed to destroy" } , status: 422

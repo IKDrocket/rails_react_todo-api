@@ -1,9 +1,9 @@
-class CreateTodps < ActiveRecord::Migration[6.1]
+class CreateTodos < ActiveRecord::Migration[6.1]
   def change
-    create_table :todps do |t|
+    create_table :todos do |t|
       t.string :name, null: false
       t.boolean :is_completed, default: false, null: false
-
+      t.datetime  :deleted_at
       t.timestamps
     end
   end
