@@ -2,7 +2,7 @@ class Api::V1::TodosController < ApplicationController
     require "date"
 
     def index
-        todos = Todo.where(deleted_at: nil).order(updated_at: :desc)
+        todos = Todo.where(deleted_at: nil).order(created_at: :desc)
         render json: todos
     end
 
